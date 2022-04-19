@@ -51,3 +51,20 @@ Other environment agnostic settings can be changed in `config/app.php`.
 The app skeleton uses [Milligram](https://milligram.io/) (v1.3) minimalist CSS
 framework by default. You can, however, replace it with any other library or
 custom styles.
+
+## Security 
+CakePHP provides you some tools to secure your application. The following sections cover those tools:
+
+### Security Utility
+
+### Form Protection Middleware
+
+### CSRF Protection
+
+### Content Security Policy
+
+### Security Headers
+
+## Refference
+https://book.cakephp.org/4/en/security.html
+HTTPS Enforcer
