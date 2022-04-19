@@ -28,6 +28,7 @@ class ArticlesController extends AppController
 
     public function add()
     {
+        
         $article = $this->Articles->newEmptyEntity();
         if ($this->request->is('post')) {
             $article = $this->Articles->patchEntity($article, $this->request->getData());
@@ -40,7 +41,8 @@ class ArticlesController extends AppController
                 $this->Flash->success(__('Your article has been saved.'));
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('Unable to add your article.'));
+            
+            $this->Flash->error(__('Unable to add your article.'.var_dump( $this->Articles->save($article) ) ));
         }
         // Get a list of tags.
         $tags = $this->Articles->Tags->find('list')->all();
